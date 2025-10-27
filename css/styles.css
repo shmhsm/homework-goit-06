@@ -45,6 +45,7 @@ img {
     --white-icons: #f4f4fd;
     --dark-blue: #4d5ae5;
     --hover-blue: #404bbf;
+    --black: #2F2F37;
 }
 
 
@@ -685,7 +686,7 @@ button:focus {
     width: 90%;
     min-height: auto;
     max-width: 408px;
-    max-height: 90vh;
+    max-height: 584px;
 
     background: #fcfcfc;
     box-shadow: 
@@ -905,10 +906,6 @@ input::placeholder {
 
 
 .mobile-menu {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -918,7 +915,6 @@ input::placeholder {
     transform: translateX(100%);
     transition: transform 250ms ease;
     flex-direction: column;
-    padding: 16px;
     z-index: 1000;
 }
 
@@ -987,10 +983,10 @@ input::placeholder {
         z-index: 21;
     }
 
-    .menu-icon {
+    .btn-menu svg {
+        fill: #2F2F37;
         width: 24px;
         height: 24px;
-        fill: #2E2F42;
     }
 
     .navigation,
@@ -998,7 +994,9 @@ input::placeholder {
         display: none;
     }
 
-    .mobile-menu {
+    .mobile-menu .container {
+        display: flex;
+        flex-direction: column;
         position: fixed;
         top: 0;
         left: 0;
@@ -1006,9 +1004,6 @@ input::placeholder {
         height: 100%;
         background: #fff;
         z-index: 9999;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
@@ -1026,7 +1021,7 @@ input::placeholder {
 
     .reset {
         position: absolute;
-        top: 16px;
+        top: 24px;
         right: 16px;
         background: #f0f0f0;
         border: none;
@@ -1043,10 +1038,13 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         gap: 40px;
-        margin-top: 34px;
-        margin-left: 16px;
-        margin-bottom: 110px;
+        margin-top: 48px;
+        height: 100%;
         text-decoration: none;
+    }
+
+    .current {
+        margin-top: 24px;
     }
 
     .mobile-nav a {
@@ -1064,7 +1062,8 @@ input::placeholder {
         display: flex;
         flex-direction: column;
         gap: 24px;
-        margin-left: 16px;
+        font-style: normal;
+        margin-top: auto;
         margin-bottom: 48px;
     }
 
@@ -1082,10 +1081,11 @@ input::placeholder {
         text-decoration: none;
     }
 
-    .mobile-socials ul {
+    .mobile-socials {
         display: flex;
-        justify-content: center;
+        justify-content: left;
         gap: 40px;
+        margin-top: auto;
     }
 
     .mobile-socials .social-link {
@@ -1099,11 +1099,6 @@ input::placeholder {
         fill: #fff;
         text-decoration: none;
         margin-bottom: 40px;
-    }
-
-    .mobile-socials .social-link svg {
-        width: 20px;
-        height: 20px;
     }
 
 
@@ -1161,7 +1156,7 @@ input::placeholder {
     .list-prio {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 72px;
         align-items: center;
     }
 
@@ -1200,11 +1195,6 @@ input::placeholder {
         width: 288px;
         height: 400px;
     }
-
-    .details-portf {
-        padding-bottom: 72px;
-    }
-
 
     .footer {
         padding: 96px 0;
@@ -1279,13 +1269,13 @@ input::placeholder {
 
     .modal {
         position: fixed;
-        top: 5%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
+        transform: translate(-50%, -50%);
+
         min-height: auto;
-        max-width: 308px;
-        max-height: 90vh;
+        max-width: 288px;
+        max-height: 623px;
         padding: 16px;
         overflow-y: auto;
         z-index: 9999;
@@ -1323,18 +1313,27 @@ input::placeholder {
 
 
 @media (min-width: 768px) and (max-width: 1157px) {
+
+    .container {
+        max-width: 1157px;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
     .address {
         display: block;
         justify-content: column;
     }
     .first-hujnia {
-        margin: 14px 0 12px auto;
+        margin: 16px 0 12px auto;
         font-size: 12px;
         letter-spacing: 4%;
         line-height: 14px;
     }
     .second-hujnia {
-        margin: 0 0 14px auto;
+        margin: 0 0 16px auto;
         font-size: 12px;
         letter-spacing: 4%;
         line-height: 14px;
@@ -1365,7 +1364,7 @@ input::placeholder {
     .list-prio {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 72px;
+        gap:  72px 24px;
     }
 
     .title-prio {
@@ -1380,7 +1379,7 @@ input::placeholder {
 
 
     .third-sec {
-        padding: 96px 0 56px;
+        padding: 96px 0;
     }
 
     .container-team {
@@ -1395,31 +1394,30 @@ input::placeholder {
         justify-items: center;
         padding: 0;
         list-style: none;
-
     }
 
     .hiro {
-        max-width: 260px;
+        max-width: 428px;
     }
 
     .fourth-sec {
-        padding: 96px 0 14px 0;
+        padding: 96px 0;
     }
 
     .container-list-port {
         align-items: center;
+        padding: 32px 0;
     }
 
     .list-portf {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 24px;
+        gap: 72px 24px;
         width: 736px;
     }
 
     .list-list {
         width: 356px;
-        margin-bottom: 72px;
     }
 
 
@@ -1430,22 +1428,22 @@ input::placeholder {
     .footer-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px 60px;
+        gap: 24px;
         width: 100%;
         margin: 0 auto;
+        margin-bottom: 72px;
         justify-items: center;
     }
 
     .container-footer {
         display: grid;
-        max-width: 500px;
+        max-width: 520px;
     }
 
     .container-logo-p {
         grid-column: 1;
         font-size: 16px;
         margin: 0;
-        margin-bottom: 72px;
     }
 
     .social-container {
@@ -1456,6 +1454,7 @@ input::placeholder {
         border-radius: 4px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: none;
+        max-width: 232px;
     }
 
     .subscribe-input::placeholder {
@@ -1476,9 +1475,9 @@ input::placeholder {
 
     .modal {
         position: fixed;
-        top: 20px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         width: 90%;
         max-width: 400px;
         max-height: 90vh;
@@ -1513,6 +1512,10 @@ input::placeholder {
 
 
 @media (min-width: 1158px) {
+    .mobile-menu {
+        display: none;
+    }
+
     .footer-container {
         display: flex;
         justify-content: space-between;
