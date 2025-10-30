@@ -351,6 +351,7 @@ button:focus {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    justify-content: center;
 }
 
 .title {
@@ -1569,3 +1570,4 @@ input::placeholder {
     }
 
 }
+
