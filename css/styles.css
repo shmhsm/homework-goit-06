@@ -46,6 +46,12 @@ img {
     --dark-blue: #4d5ae5;
     --hover-blue: #404bbf;
     --black: #2F2F37;
+    --img-1: url('./images/imge1.jpg'), url('./images/imge2.jpg'), 
+    url('./images/imge3.jpg'), url('./images/imge4.jpg');
+
+    --img-2: url('./images/1stpic.jpg'), url('./images/2ndpic.jpg'), 
+    url('./images/3rdpic.jpg'), url('./images/4thpic.jpg'),
+    url('./images/5thpic.jpg'), url('./images/6thpic.jpg');
 }
 
 
@@ -222,7 +228,7 @@ img {
 .first-section {
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/ofice.jpg);
+        url(../images/ofice.jpg), url(../images/ofice@2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -335,8 +341,15 @@ button:focus {
     background-color: #F4F4FD;
 }
 
+.third-sec .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
 .list-team {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
 }
 
@@ -358,6 +371,7 @@ button:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
+        max-width: 264px;
 }
 
 .title-team {
@@ -375,6 +389,12 @@ button:focus {
     line-height: 1.5;
     color: #434455;
     margin-bottom: 8px;
+}
+
+.image-third-sec {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .social-ul {
@@ -476,7 +496,7 @@ button:focus {
     z-index: 2;
 }
 
-.portfolio-img {
+.image-fourth-sec {
     display: block;
     width: 100%;
     z-index: 1;
@@ -929,6 +949,14 @@ input::placeholder {
 
 
 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .first-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/ofice@2.jpg');
+    }
+}
+
 
 
 
@@ -1169,6 +1197,10 @@ input::placeholder {
 
     .third-sec {
         padding: 96px 0;
+    }
+
+    .hero {
+        max-width: 264px;
     }
 
     .list-team {
