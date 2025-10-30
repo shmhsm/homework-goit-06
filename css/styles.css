@@ -339,6 +339,7 @@ button:focus {
 .third-sec {
     padding: 120px 0;
     background-color: #F4F4FD;
+    align-items: center;
 }
 
 .third-sec .container {
@@ -1226,7 +1227,6 @@ input::placeholder {
     .list-list {
         max-width: 100%;
         width: 288px;
-        height: 400px;
     }
 
     .footer {
@@ -1570,4 +1570,3 @@ input::placeholder {
     }
 
 }
-
